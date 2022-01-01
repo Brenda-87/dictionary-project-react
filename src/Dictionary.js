@@ -23,6 +23,7 @@ export default function Dictionary() {
         </div>
         <div className="col Dictionary-search">
           <form onSubmit={search}>
+            <i class="fas fa-search magnifier-icon"></i>
             <input
               type="search"
               onChange={handleKeywordChange}
