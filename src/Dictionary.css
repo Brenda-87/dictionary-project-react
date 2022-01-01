@@ -1,12 +1,12 @@
 h1 {
   color: #ededed;
   font-family: "Indie Flower", cursive;
-  font-size: 55px;
+  font-size: 70px;
   line-height: 1;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 900px;
   max-height: 80%;
 }
 
@@ -20,12 +20,4 @@ h1 {
 
 .heading {
   font-style: oblique;
-}
-
-.magnifier-icon {
-  color: rgb(66, 66, 66);
-  left: 600px;
-  position: absolute;
-  padding: 12px;
-  width: 100%;
 }
