@@ -1,0 +1,16 @@
+h1 {
+  color: #ededed;
+  font-size: 40px;
+}
+
+.container {
+  max-width: 80%;
+}
+
+.Dictionary {
+  color: white;
+}
+
+.heading {
+  font-style: oblique;
+}

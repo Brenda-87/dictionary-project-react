@@ -1,14 +1,26 @@
+import Dictionary from "./Dictionary";
+
 import "./App.css";
 import book from "./images/book-black-white.jpeg";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={book} className="App-image" width="400" height="200"></img>
+        <img
+          src={book}
+          alt="book"
+          className="App-image"
+          width="400"
+          height="200"
+        ></img>
       </header>
+      <main>
+        <Dictionary />
+      </main>
+      <footer>
+        <small>Coded by Brenda | GitHub Netlify</small>
+      </footer>
     </div>
   );
 }
-
-export default App;

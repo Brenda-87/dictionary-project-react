@@ -1,5 +1,13 @@
+footer {
+  text-align: center;
+}
+
+small {
+  color: #ededed;
+}
+
 .App-header {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .App-image {
