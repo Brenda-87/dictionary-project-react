@@ -18,7 +18,7 @@ export default function App() {
       <main>
         <Dictionary />
       </main>
-      <footer className="text-center">
+      <footer className="text-center mb-4">
         <small>Coded by Brenda | GitHub & Netlify</small>
       </footer>
     </div>

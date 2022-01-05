@@ -10,7 +10,6 @@ export default function Dictionary() {
 
   function search(event) {
     event.preventDefault();
-    //alert(`Searching for the definition of "${keyword}".`);
 
     function handleResponse(response) {
       console.log(response.data[0]);
@@ -37,7 +36,7 @@ export default function Dictionary() {
               type="search"
               onChange={handleKeywordChange}
               className="form-control"
-              placeholder="floccinaucinihilipilification"
+              placeholder="Search for a word"
               autoFocus={true}
             ></input>
           </form>

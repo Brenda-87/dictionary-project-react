@@ -7,7 +7,8 @@ export default function Meaning(props) {
     <div className="Meaning container">
       <div className="row">
         <div className="col">
-          <h4>{props.meaning.partOfSpeech}</h4>
+          <p className="fw-bold">{props.meaning.partOfSpeech}</p>
+          {/* ordered list of meanings */}
           {props.meaning.definitions.map(function (definition, index) {
             return (
               <div key={index}>
@@ -16,22 +17,20 @@ export default function Meaning(props) {
                   <p className="fst-italic">Example: {definition.example}</p>
                 )}
 
-                <div className="col">
-                  {definition.synonyms.length === 0 ? null : (
-                    <div>
-                      {" "}
-                      <p>Synonyms </p>
-                      {definition.synonyms.map(function (synonym) {
-                        return (
-                          <span className="badge bg-light text-dark m-1">
-                            {" "}
-                            {synonym}{" "}
-                          </span>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
+                {definition.synonyms.length === 0 ? null : (
+                  <div>
+                    {" "}
+                    <p>Synonyms </p>
+                    {definition.synonyms.map(function (synonym) {
+                      return (
+                        <span className="badge bg-light text-dark m-1">
+                          {" "}
+                          {synonym}{" "}
+                        </span>
+                      );
+                    })}
+                  </div>
+                )}
 
                 <hr />
               </div>
