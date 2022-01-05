@@ -1,4 +1,5 @@
 import React from "react";
+import Synonyms from "./Synonyms";
 
 import "./Meaning.css";
 
@@ -8,30 +9,21 @@ export default function Meaning(props) {
       <div className="row">
         <div className="col">
           <p className="fw-bold">{props.meaning.partOfSpeech}</p>
-          {/* ordered list of meanings */}
           {props.meaning.definitions.map(function (definition, index) {
             return (
               <div key={index}>
-                <p>{definition.definition}</p>
+                <ul>
+                  <li>{definition.definition}</li>
+                </ul>
                 {definition.example === undefined ? null : (
-                  <p className="fst-italic">Example: {definition.example}</p>
+                  <p className="fw-bold example-given">
+                    Example:{" "}
+                    <span className="fst-italic fw-light">
+                      {definition.example}.
+                    </span>
+                  </p>
                 )}
-
-                {definition.synonyms.length === 0 ? null : (
-                  <div>
-                    {" "}
-                    <p>Synonyms </p>
-                    {definition.synonyms.map(function (synonym) {
-                      return (
-                        <span className="badge bg-light text-dark m-1">
-                          {" "}
-                          {synonym}{" "}
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
-
+                <Synonyms synonyms={definition.synonyms} />
                 <hr />
               </div>
             );
