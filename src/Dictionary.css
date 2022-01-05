@@ -2,7 +2,6 @@ h1 {
   color: #ededed;
   font-family: "Indie Flower", cursive;
   font-size: 70px;
-  line-height: 1;
 }
 
 .container {
@@ -15,7 +14,7 @@ h1 {
 }
 
 .Dictionary-search {
-  padding-top: 38px;
+  padding-top: 50px;
 }
 
 .heading {

@@ -10,7 +10,7 @@ export default function App() {
         <img
           src={book}
           alt="book"
-          className="App-image mb-3"
+          className="App-image mb-3 text-center"
           width="400"
           height="200"
         ></img>
@@ -18,7 +18,7 @@ export default function App() {
       <main>
         <Dictionary />
       </main>
-      <footer>
+      <footer className="text-center">
         <small>Coded by Brenda | GitHub & Netlify</small>
       </footer>
     </div>
