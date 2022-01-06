@@ -12,7 +12,6 @@ export default function Dictionary() {
     event.preventDefault();
 
     function handleResponse(response) {
-      console.log(response.data[0]);
       setResults(response.data[0]);
     }
     // API documentation: https://dictionaryapi.dev/
