@@ -1,4 +1,5 @@
 import React from "react";
+import "./Synonyms.css";
 
 export default function Synonyms(props) {
   return (
@@ -8,7 +9,10 @@ export default function Synonyms(props) {
           <p className="fw-bold">Synonyms </p>
           {props.synonyms.map(function (synonym, index) {
             return (
-              <span className="badge bg-light text-dark m-1" key={index}>
+              <span
+                className="badge bg-light text-dark m-1 synonyms"
+                key={index}
+              >
                 {synonym}
               </span>
             );

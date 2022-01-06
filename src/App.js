@@ -16,10 +16,28 @@ export default function App() {
         ></img>
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultKeyword="supercalifragilisticexpialidocious" />
       </main>
       <footer className="text-center mb-4">
-        <small>Coded by Brenda | GitHub & Netlify</small>
+        <small>
+          Coded by Brenda |{" "}
+          <a
+            href="https://github.com/Brenda-87/dictionary-project-react"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>{" "}
+          &{" "}
+          <a
+            href="https://hopeful-bardeen-d09d69.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Netlify
+          </a>
+        </small>
       </footer>
     </div>
   );

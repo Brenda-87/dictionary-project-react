@@ -1,5 +1,10 @@
-small {
+.App small {
   color: #ededed;
+}
+
+.App a {
+  color: orange;
+  text-decoration: none;
 }
 
 .App-header {

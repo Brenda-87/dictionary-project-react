@@ -9,9 +9,9 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results rounded m-4 p-5">
-        <h4>
+        <h2 className="mb-4">
           Definition of <mark>{props.results.word}</mark>
-        </h4>
+        </h2>
         {props.results.phonetics.map(function (phonetic, index) {
           return (
             <div key={index}>

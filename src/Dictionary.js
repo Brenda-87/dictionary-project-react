@@ -4,44 +4,59 @@ import Results from "./Results";
 
 import "./Dictionary.css";
 
-export default function Dictionary() {
-  let [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
+  let [loaded, setLoaded] = useState(false);
 
-  function search(event) {
-    event.preventDefault();
+  function handleResponse(response) {
+    setResults(response.data[0]);
+  }
 
-    function handleResponse(response) {
-      setResults(response.data[0]);
-    }
-    // API documentation: https://dictionaryapi.dev/
+  function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
   }
 
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary container">
-      <div className="row">
-        <div className="col-5 heading">
-          <h1 className="lh-1">Brenda's Dictionary</h1>
+  function load() {
+    setLoaded(true);
+    search();
+  }
+
+  if (loaded) {
+    return (
+      <div className="Dictionary container">
+        <div className="row">
+          <div className="col heading">
+            <h1>Brenda's Dictionary</h1>
+          </div>
+          <div className="col Dictionary-search">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                onChange={handleKeywordChange}
+                defaultValue={props.defaultKeyword}
+                className="form-control"
+                placeholder="Search for a word"
+                autoFocus={true}
+              ></input>
+            </form>
+          </div>
         </div>
-        <div className="col Dictionary-search">
-          <form onSubmit={search}>
-            <input
-              type="search"
-              onChange={handleKeywordChange}
-              className="form-control"
-              placeholder="Search for a word"
-              autoFocus={true}
-            ></input>
-          </form>
-        </div>
+        <Results results={results} />
       </div>
-      <Results results={results} />
-    </div>
-  );
+    );
+  } else {
+    load();
+    return "Loading";
+  }
 }

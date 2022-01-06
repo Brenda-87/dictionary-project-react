@@ -1,3 +1,13 @@
-.example-given {
+.Meaning p {
+  color: rgb(194, 194, 194);
+  font-size: 20px;
+}
+
+.Meaning .example-given {
   margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.Meaning li {
+  font-size: 22px;
 }
