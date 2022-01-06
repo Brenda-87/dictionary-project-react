@@ -1,13 +1,17 @@
-.Meaning p {
-  color: rgb(194, 194, 194);
-  font-size: 20px;
+.Meaning example-definition {
+  color: var(--secondary-text-color);
 }
 
 .Meaning .example-given {
+  font-size: 22px;
   margin-left: 30px;
   margin-bottom: 30px;
 }
 
 .Meaning li {
   font-size: 22px;
+}
+
+.Meaning .part-speech {
+  color: var(--main-text-color);
 }

@@ -1,23 +1,22 @@
 .Dictionary body {
-  max-width: 900px;
   max-height: 80%;
 }
 
+.dictionary {
+  color: var(--main-text-color);
+  background: var(--secondary-background);
+}
+
 .Dictionary h1 {
-  color: #ededed;
+  color: var(--main-text-color);
   font-family: "Indie Flower", cursive;
-  font-size: 60px;
+  font-size: 70px;
 }
 
-.Dictionary .container {
-}
-
-.Dictionary {
-  color: white;
-}
-
-.Dictionary .Dictionary-search {
-  padding-top: 25px;
+.Dictionary input {
+  font-size: 25px;
+  width: 500px;
+  margin-bottom: 10px;
 }
 
 .Dictionary .heading {

@@ -1,5 +1,12 @@
+:root {
+  --main-background: black;
+  --secondary-background: #003f5c;
+  --main-text-color: #fdfdf6;
+  --secondary-text-color: rgb(194, 194, 194);
+}
+
 body {
-  background: #000000;
+  background: var(--main-background);
   font-family: "Genos", sans-serif;
   font-family: "Nunito", sans-serif;
   font-family: "Roboto", sans-serif;

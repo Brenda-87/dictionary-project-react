@@ -8,7 +8,7 @@ export default function Meaning(props) {
     <div className="Meaning container">
       <div className="row">
         <div className="col">
-          <p className="fw-bold">{props.meaning.partOfSpeech}</p>
+          <p className="fw-bold part-speech">{props.meaning.partOfSpeech}</p>
           {props.meaning.definitions.map(function (definition, index) {
             return (
               <div key={index}>
@@ -18,7 +18,7 @@ export default function Meaning(props) {
                 {definition.example === undefined ? null : (
                   <p className="fw-bold example-given">
                     Example:{" "}
-                    <span className="fst-italic fw-light">
+                    <span className="fst-italic fw-light example-definition">
                       {definition.example}.
                     </span>
                   </p>

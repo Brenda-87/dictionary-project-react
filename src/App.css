@@ -1,5 +1,5 @@
 .App small {
-  color: #ededed;
+  color: var(--main-text-color);
 }
 
 .App a {
