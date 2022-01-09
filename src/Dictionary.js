@@ -13,6 +13,12 @@ export default function Dictionary(props) {
 
   function handleResponse(response) {
     setResults(response.data[0]);
+
+    const pexelsApiKey =
+      "563492ad6f91700001000001c16a9d8d23724c3b9325257f62a527ed";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+    const headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handlePexelsResponse(response) {
@@ -21,13 +27,10 @@ export default function Dictionary(props) {
 
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
-
-    const pexelsApiKey =
-      "563492ad6f91700001000001c16a9d8d23724c3b9325257f62a527ed";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
-    const headers = { Authorization: `Bearer ${pexelsApiKey}` };
-    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch(() => alert("Word not found. Search for another word!"));
   }
 
   function handleSubmit(event) {
@@ -64,7 +67,7 @@ export default function Dictionary(props) {
             </form>
           </div>
         </div>
-        <div className="row dictionary rounded m-4 p-5">
+        <div className=" dictionary rounded m-4 p-5">
           <Results results={results} />
           <Images images={images} />
         </div>

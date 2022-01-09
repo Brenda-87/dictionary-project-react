@@ -1,10 +1,6 @@
-.Dictionary body {
-  max-height: 80%;
-}
-
 .dictionary {
   color: var(--main-text-color);
-  background: var(--secondary-background);
+  background: var(--secondary-bg-color);
 }
 
 .Dictionary h1 {
